@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>icon 生成工具</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="form-line">
+			<label for class="label">请输入border-width值:</label>
+			<div class="input ipt-wid">
+				<input type="text" class="ipt" value="10px" placeholder="如:10px">
+				<a href="javascript:;" class="btn-cls show-clear">清除</a>
+			</div>
+		</div>
+		<div class="form-line">
+			<label for class="label">请输入border-color值:</label>
+			<div class="input ipt-clr">
+				<input type="text" class="ipt" value="#467" placeholder="如:#000/rgba(255,255,255,0.4)">
+				<a href="javascript:;" class="btn-cls show-clear">清除</a>
+			</div>
+		</div>
+		<div class="form-line form-btn">
+			<label for class="label">点击生成图形</label>
+			<a href="javascript:;" class="btn btn-geration">生成图形</a>
+		</div>
+	</div>
+	<div class="triangle-wrap">
+		<div class="clk-tip">点击图片查看样式</div>
+		<!-- <ul id="icon_angle " class="angle_icon clearfix">
+		</ul> -->
+		<ul class="angle_icon clearfix" id="icon_angle">
+		</ul>
+		<ul class="icon_style clearfix" id="icon_style">
+			<li class="a  pos-hide">
+				<pre></pre>
+				<a href="javascript:;" class="btn-cp">复制代码</a>
+			</li>
+			<li class="b  pos-hide">
+				<pre></pre>
+				<a href="javascript:;"  class="btn-cp">复制代码</a>
+			</li>
+			<li class="c  pos-hide">
+				<pre></pre>
+				<a href="javascript:;"  class="btn-cp">复制代码</a>
+			</li>
+
+			<li class="d  pos-hide">
+				<pre></pre>
+				<a href="javascript:;"  class="btn-cp">复制代码</a>
+			</li>
+			<li class="e  pos-hide">
+				<pre></pre>
+				<a href="javascript:;"  class="btn-cp">复制代码</a>
+			</li>
+			<li class="f pos-hide ">
+				<pre></pre>
+				<a href="javascript:;"  class="btn-cp">复制代码</a>
+			</li>
+			<li class="g  pos-hide">
+				<pre></pre>
+				<a href="javascript:;"  class="btn-cp">复制代码</a>
+			</li>
+			<li class="h  pos-hide">
+				<pre></pre>
+				<a href="javascript:;" id ="copy" class="btn-cp">复制代码</a>
+			</li>
+		</ul>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.zclip.js"></script>
+	<script src="js/gernerate.js"></script>
+</body>
+</html>
