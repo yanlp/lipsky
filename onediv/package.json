@@ -1,0 +1,11 @@
+{
+  "name": "OneDiv",
+  "version": "0.1.0",
+  "description": "sys",
+  "devDependencies": {
+  "grunt-contrib-watch": "*",
+  "grunt-browser-sync": "*",
+  "grunt-contrib-sass":"*"
+  }
+}
+
