@@ -1,10 +1,11 @@
 $(function() {
 	/*清除input的内容*/
-	$('.btn-cls.show-clear').on("click", function() {
+	$('.btn-cls').on("click", function() {
 		var self = $(this);
+		debugger;
 		self.prev().val("");
 		self.removeClass('show-clear');
-	})
+	});
 	var GerneraIcon = {
 		borderwidth: 0,
 		borderColor: null,
@@ -91,7 +92,7 @@ $(function() {
 				};
 			if(triangleObj.find('li').length>0){triangleObj.html("");}
 			if($('#tempStyle').length >0){$('#tempStyle').remove();}
-			for (i in extendStyle) {
+			for (var i in extendStyle) {
 				$('<li class='+i+'><span></span></li>').appendTo(triangleObj);
 				cssText += "\n\t"+self.iconWpCls+" ."+i+" span {" + extendStyle[i].replace(/;/g,";\n\t") + "}\n\t";
 				cssTextValue = '.iconTriangle {\n\t' + triangelStyle + extendStyle[i].replace(/;/g,";\n\t") + "\n}";
@@ -104,7 +105,7 @@ $(function() {
 			self.containWrap.removeClass('hide-wrap');
 
 		}
-	}
+	};
 
 	GerneraIcon.btnObj.on('click', function(event) {
 		event.preventDefault();
@@ -115,11 +116,10 @@ $(function() {
 	$('.angle_icon li').live('click',function(){
 		var index = $(this).index();
 		$('.icon_style li').eq(index).removeClass('pos-hide').siblings().addClass('pos-hide');
-	})
+	});
 	$('.icon_style .btn-cp').zclip({
         path: 'ZeroClipboard.swf',
         copy: function(){//复制内容
-        	debugger
             return $(this).prev().text();
         },
         afterCopy: function(){//复制成功
@@ -131,9 +131,9 @@ $(function() {
 		var value = self.val();
 		var siblings = self.siblings('.btn-cls');
 		var flag = siblings.hasClass('show-clear');
-		if(value){
+		if(!value){
 			siblings.removeClass('show-clear');
-			$(this).zclip(show);
+			$(this).zclip("show");
 		} else{
 			siblings.addClass('show-clear');
 		}
@@ -150,7 +150,7 @@ $(function() {
     		});
     	GerneraIcon.init();
     	}
-    })
+    });
     //重置
 
-})
+});
